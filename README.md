@@ -5,7 +5,7 @@ Data (n=4,873) available upon DACO approval (https://www.cgen.ca/daco-main)
 
 ## Resources  
 
-[GSA v3 b151 GRCh38](https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/global-screening-array-24/v3-0/GSA-24v3-0-A2-manifest-file-csv.zip)
+[Illumina GSA v3 b151 GRCh38](https://support.illumina.com/content/dam/illumina-support/documents/downloads/productfiles/global-screening-array-24/v3-0/GSA-24v3-0-A2-manifest-file-csv.zip)
 
 ## Software 
 [REGENIE 3.2.5.2](https://rgcgithub.github.io/regenie/)  
