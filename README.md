@@ -9,7 +9,6 @@ Data (n=4,873) available upon DACO approval (https://www.cgen.ca/daco-main)
 
 ## Software 
 [REGENIE 3.2.5.2](https://rgcgithub.github.io/regenie/)  
-[ensembl-vep 109.3](https://useast.ensembl.org/info/docs/tools/vep/index.html)  
 [PRSice 2.3.5](https://choishingwan.github.io/PRSice/)
 
 
