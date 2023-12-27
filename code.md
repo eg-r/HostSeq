@@ -1,8 +1,8 @@
 ---
 title: "COVID-19 Hospitalization in HostSeq"
-subtitle: "Code documentation for analysis of n=4873 samples"
+subtitle: "Code documentation for analysis of n=8474 samples"
 author: "Elika Garg"
-date: 'May 2023'
+date: 'December 2023'
 output: 
   html_document: 
     keep_md: yes
@@ -20,17 +20,16 @@ output:
 
 ```bash
 plink2 
---pfile n4873 vzs # final plink file after QC with 4873 samples 
+--pfile n8474 vzs # final plink file after QC with 8474 samples 
 --extract infinium-gsa-24-v3-0-a1-b151-rsids.txt # subset to Illumina GSA variants
 --maf 0.01 # filter minor-allele frequency >1%
---mac 100 # filter minor-allele count >100
 --not-chr Y,MT # exclude chromosomes Y and MT
 --max-alleles 2 # conform to bi-allelic format
 --make-pgen psam-cols=fid,sex # create plink file with required columns
 --out input_step1 # genotype file for step-1 in regenie
 
 plink2 
---pfile n4873 vzs # final plink file after QC with 4873 samples 
+--pfile n8474 vzs # final plink file after QC with 8474 samples 
 --not-chr Y,MT # exclude chromosomes Y and MT
 --max-alleles 2 # conform to bi-allelic format
 --make-pgen psam-cols=fid,sex # create plink file with required columns
@@ -49,7 +48,8 @@ regenie
 --phenoCol hospitalization # phenotype variable name 
 --covarColList age,agexsex,age2,age2xsex,PC1,PC2,PC3,PC4,PC5,PC6,PC7 # covariate variable names 
 --catCovarList sex # categorical covariate
---minCaseCount 10 # filter minimum case counts >10 
+--minCaseCount 10 # filter minimum case counts >10
+--minMAC 100 # filter minor-allele count >100
 --bsize 1000 # block size for regenie 
 --bt # specify phenotype is binary  
 --test additive # specify model is additive
@@ -137,7 +137,7 @@ regenie
 
 ```bash
 plink2 
---pfile n4873 vzs # final plink file after QC with 4873 samples 
+--pfile n8474 vzs # final plink file after QC with 8474 samples 
 --autosome # only autosomes
 --max-alleles 2 # conform to bi-allelic format
 --make-bed # create plink bed file
